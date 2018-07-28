@@ -57,7 +57,7 @@ function getEvents(cal_id) {
   for(var i=0; i < events.length; i++){
     if (!events[i].isAllDayEvent()) {
       var title = events[i].getTitle()
-      if (~title.indexOf("渋谷説明会")) {  //　渋谷の説明会
+      if (~title.indexOf("説明会")) {  //　説明会
         var event = {};
         var date_time =events[i].getEndTime();
         event.date = date_time.getMonth() + "/" + date_time.getDate();
@@ -119,4 +119,4 @@ function reset_contents(sheet) {
   sheet.clearContents();
   sheet.getRange(1,1,1,nc).setValues(arrData);
 
-} 
+}

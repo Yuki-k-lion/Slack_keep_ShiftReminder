@@ -37,7 +37,7 @@ function getEvents(cal_id)
   for(var i=0; i < events.length; i++){
     if (!events[i].isAllDayEvent()) {
       var title = events[i].getTitle()
-      if (~title.indexOf("渋谷説明会")) {
+      if (~title.indexOf("説明会")) {
         var times = str_count(title,/\d\d:?\d\d~/g);
         for (var j = 0; j < times.length; j++) {
           var event = {};

@@ -1,5 +1,5 @@
 function sendToSlack(body, channel) {
-  var url = "https://hooks.slack.com/services/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";
+  var url = "https://hooks.slack";
   var data = { "channel" : channel, "username" : "Googleフォーム Bot", "text" : body, "icon_emoji" : ":date: " };
   var payload = JSON.stringify(data);
   var options = {
@@ -11,12 +11,12 @@ function sendToSlack(body, channel) {
 }
 
 function test() {
-  sendToSlack("テスト通知確認です", "#mentor_conf_notice")
+  sendToSlack("テスト通知", "#otice")
 }
 
 function onFormSubmit(e){
 
-  var body = "公開版申請が来たよ\n";
+  var body = "test\n";
   var applicant = "";
   var itemResponse = e.response.getItemResponses();
 
@@ -67,5 +67,5 @@ function onFormSubmit(e){
     }
   }
   var bodyPublic = comment + "というフォームがきました" ;
-  sendToSlack(bodyPublic, "#mentor_conf_notice");
+  sendToSlack(bodyPublic, "#otice");
 }

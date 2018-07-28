@@ -1,6 +1,6 @@
 function sendToSlack(body, channel) {
   Logger.log("send now");
-  var url = "https://hooks.slack.com/services/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";
+  var url = "https://hooks.slac";
   var data = { "channel" : channel, "username" : "Briefing session bot", "text" : body, "icon_emoji" : ":date: " };
   var payload = JSON.stringify(data);
   var options = {
@@ -12,7 +12,7 @@ function sendToSlack(body, channel) {
 }
 
 function sendToSlack2(body, channel) {
-  var url = "https://hooks.slack.com/services/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";
+  var url = "https://hooks.slack.co";
   var data = { "channel" : channel, "username" : "Briefing session bot", "text" : body, "icon_emoji" : ":date: " };
   var payload = JSON.stringify(data);
   var options = {
@@ -29,7 +29,7 @@ function test() {
 
 
 function onFormSubmit(e){
- var body = "公開版申請\n";
+ var body = "test\n";
  var applicant = "";
  var itemResponse = e.response.getItemResponses();
  for (var j = 0; j < itemResponse.length; j++){
@@ -37,19 +37,19 @@ function onFormSubmit(e){
    var title = formData.getItem().getTitle();
    var response = formData.getResponse();
    switch (title) {
-     case "投稿者名":
+     case "test":
        name = response;
        break;
-     case "参加者名":
+     case "test":
        student = response;
        break;
-     case "カウンセリング実施月":
+     case "月":
        month = response;
        break;
-     case "カウンセリング実施日":
+     case "日":
        day = response;
        break;
-     case "学生か社会人か":
+     case "学生社会人":
        student_or_society = response;
        break;
      case "年代":
@@ -58,41 +58,41 @@ function onFormSubmit(e){
      case "性別":
        sex = response;
        break;
-     case "実施拠点":
+     case "拠点":
        class_place = response;
        break;
-     case "CV結果":
+     case "結果":
        cv_result = response;
        break;
-     case "LINE@登録":
+     case "登録":
        line_at = response;
        break;
-     case "テクノロジースキルを学びたい理由":
+     case "理由":
        study_reason = response;
        break;
-     case "テクノロジースキルを学びたい理由の詳細":
+     case "理由の詳細":
        study_reason_detail = response;
        break;
-     case "転職願望":
+     case "転職":
        if (response == "なし") {
          work_change = response;
         } else {
-         work_change = response + " <@takumi_harigaya> `チェック！`";
+         work_change = response + " チェック！";
        };
        break;
-     case "興味を持って頂いたコンテンツ":
+     case "コンテンツ":
        favorite_contents = response;
        break;
-     case "プログラミングの学習経験":
+     case "経験":
        programming_study = response;
        break;
      case "上記「あり」の場合の言語と学習期間":
        programming_study_detail = response;
        break;
-     case "その他備考":
+     case "備考":
        other = response;
        break;
-     case "受講に至らなかった一番の原因":
+     case "原因":
        no_cv_reason = response;
        break;
      case "どういうアプローチをしたか":
@@ -101,13 +101,13 @@ function onFormSubmit(e){
      case "どういう風に断られたか":
        turn_down = response;
        break;
-     case "次回同じような方がきた場合どう対応をすれば良いか":
+     case "次回対応をすれば良いか":
        next_action = response;
        break;
-     case "LINE@の後追いでどのようなアプローチをすれば良いか":
+     case "アプローチをすれば良いか":
        line_at_approach = response;
        break;
-     case "CVできた理由":
+     case "理由":
        cv_reason = response;
        break;
      default:
