@@ -26,3 +26,6 @@ https://qiita.com/mizuki_takahashi/items/3f77c2e5b6142563ce66
 ## Githubの使い方めも
 ちょっと関係ないけど  
 https://qiita.com/ukiuni@github/items/56ff7dd04c1c2748fbbb
+
+## 空のプルリク作るために
+`$ git commit --allow-empty -m "make pull request"`
