@@ -6,7 +6,9 @@ $webhook_url = 'https://hooks.slack.com/services/T7KRG1U4X/BC87W0JJU/tEvlzstfkM4
 $msg = array(
     'username' => 'Slackテスト',
     'text' => 'Hello, Slack Incoming WebHooks.'
+
 );
+
 //他にも指定色々。https://api.slack.com/incoming-webhooks
 $msg = json_encode($msg);
 $msg = 'payload=' . urlencode($msg);
